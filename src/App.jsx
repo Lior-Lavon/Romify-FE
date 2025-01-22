@@ -3,7 +3,7 @@ import { Navbar, Search, Listing, Footer } from "./components";
 const App = () => {
   return (
     <div>
-      <div className="mx-4">
+      <div className="w-[100%]">
         <Navbar />
         <Search />
         <Listing />

@@ -19,11 +19,11 @@ const MenuItems = [
 ];
 const Navbar = () => {
   return (
-    <div className="h-[5rem] w-[100%] bg-white flex items-center justify-between px-4 mt-4">
+    <div className="h-[5rem] w-[100%] bg-white flex items-center justify-between px-4 ">
       {/* logo */}
-      <div className="flex items-center gap-4">
-        <FaHome className="text-3xl" />
-        <h1 className="text-3xl tracking-normal font-medium">Romify</h1>
+      <div className="flex items-center gap-2 text-2xl sm:text-3xl sm:gap-4">
+        <FaHome className="" />
+        <h1 className="tracking-normal font-medium">Romify</h1>
       </div>
       {/* menu */}
       <ul className="hidden sm:flex items-center justify-between text-2xl w-[240px] md:w-[300px]">
@@ -39,11 +39,11 @@ const Navbar = () => {
         })}
       </ul>
       {/* register / login */}
-      <div className="flex items-center gap-4">
-        <button className="bg-primary text-white py-2 px-4 rounded-lg text-1xl tracking-wider hover:bg-primary/80 transition-all duration-300">
+      <div className="flex items-center gap-2 md:gap-4">
+        <button className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg">
           Login
         </button>
-        <button className="bg-primary text-white py-2 px-4 rounded-lg text-1xl tracking-wider hover:bg-primary/80 transition-all duration-300">
+        <button className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg">
           Register
         </button>
       </div>

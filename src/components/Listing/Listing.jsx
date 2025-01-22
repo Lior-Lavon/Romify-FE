@@ -41,13 +41,13 @@ const Listings = [
 
 const Listing = () => {
   return (
-    <div className="w-[100%] px-[2rem] ">
-      <span className="text-3xl bold tracking-wide font-bold">
+    <div className="w-[100%] px-[1rem] sm:px-[2rem] ">
+      <span className="text-1xl sm:text-3xl bold tracking-wide font-bold">
         Featured Listings
       </span>
 
       {/* listing */}
-      <div className="w-[100%] p-4 flex flex-wrap gap-4">
+      <div className="w-[100%] p-2 flex flex-wrap gap-4">
         {Listings.map((elm) => {
           return <Card key={elm.id} listing={elm} />;
         })}
