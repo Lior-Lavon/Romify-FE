@@ -1,4 +1,11 @@
 import { FaHome } from "react-icons/fa";
+import {
+  setUserInLocalStorage,
+  getUserFromLocalStorage,
+  clearUserFromLocalStorage,
+} from "../../utils/localStorage";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const MenuItems = [
   {
@@ -18,6 +25,22 @@ const MenuItems = [
   },
 ];
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [userInfo, setUserInfo] = useState(null);
+
+  useEffect(() => {
+    setUserInfo(getUserFromLocalStorage());
+  }, []);
+
+  const handleLogin = () => {
+    setUserInLocalStorage({ name: "lior" });
+    navigate("/");
+  };
+  const handleLogout = () => {
+    clearUserFromLocalStorage();
+    navigate("/landing");
+  };
+
   return (
     <div className="h-[5rem] w-[100%] bg-white flex items-center justify-between px-4 ">
       {/* logo */}
@@ -40,9 +63,22 @@ const Navbar = () => {
       </ul>
       {/* register / login */}
       <div className="flex items-center gap-2 md:gap-4">
-        <button className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg">
-          Login
-        </button>
+        {!userInfo ? (
+          <button
+            className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg"
+            onClick={handleLogin}
+          >
+            Login
+          </button>
+        ) : (
+          <button
+            className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg"
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
+        )}
+
         <button className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg">
           Register
         </button>

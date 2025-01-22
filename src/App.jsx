@@ -1,4 +1,5 @@
 import { LandingPage } from "./pages";
+import { Dashboard } from "./dashboard";
 import ProtectiveRoute from "./dashboard/ProtectiveRoute";
 import {
   BrowserRouter,
@@ -17,7 +18,7 @@ const App = () => {
           path="/"
           element={
             <ProtectiveRoute>
-              <LandingPage />
+              <Dashboard />
             </ProtectiveRoute>
           }
         ></Route>
