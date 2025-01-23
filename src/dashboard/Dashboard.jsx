@@ -1,13 +1,14 @@
-import { Navbar, LeftMenu, ContentArea } from "../components";
+import { Navbar, LeftMenu, Content } from "../components";
 
 const Dashboard = () => {
   return (
     <div>
       <Navbar className="w-[100%]" />
       {/* <Footer /> */}
-      <div className="w-[100%] bg-yellow-500 flex flex-row">
+      <div className="w-[100%] bg-white flex flex-row">
         <LeftMenu />
-        <ContentArea />
+        <Content />
+        {/* <Content /> */}
       </div>
     </div>
   );
