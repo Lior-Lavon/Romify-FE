@@ -64,12 +64,18 @@ const Navbar = () => {
       {/* register / login */}
       <div className="flex items-center gap-2 md:gap-4">
         {!userInfo ? (
-          <button
-            className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg"
-            onClick={handleLogin}
-          >
-            Login
-          </button>
+          <>
+            <button
+              className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg"
+              onClick={handleLogin}
+            >
+              Login
+            </button>
+
+            <button className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg">
+              Register
+            </button>
+          </>
         ) : (
           <button
             className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg"
@@ -78,10 +84,6 @@ const Navbar = () => {
             Logout
           </button>
         )}
-
-        <button className="bg-primary text-white py-2 px-2 rounded-lg text-sm tracking-wider hover:bg-primary/80 transition-all duration-300 sm:px-4 sm:text-lg">
-          Register
-        </button>
       </div>
     </div>
   );
