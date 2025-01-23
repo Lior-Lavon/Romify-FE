@@ -1,12 +1,14 @@
-import { Navbar, Footer } from "../components";
+import { Navbar, LeftMenu, ContentArea } from "../components";
 
 const Dashboard = () => {
   return (
     <div>
-      <div className="w-[100%]">
-        <Navbar />
+      <Navbar className="w-[100%]" />
+      {/* <Footer /> */}
+      <div className="w-[100%] bg-yellow-500 flex flex-row">
+        <LeftMenu />
+        <ContentArea />
       </div>
-      <Footer />
     </div>
   );
 };
