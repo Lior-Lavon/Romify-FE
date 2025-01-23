@@ -46,7 +46,7 @@ const Navbar = () => {
       {/* logo */}
       <div className="flex items-center gap-2 text-2xl sm:text-3xl sm:gap-4">
         <FaHome className="" />
-        <h1 className="tracking-normal font-medium">Romify</h1>
+        <h1 className="tracking-normal font-medium">Roomify</h1>
       </div>
       {/* menu */}
       <ul className="hidden sm:flex items-center justify-between text-2xl w-[240px] md:w-[300px]">
